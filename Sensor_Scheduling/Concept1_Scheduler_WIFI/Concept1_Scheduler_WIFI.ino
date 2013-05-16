@@ -1,4 +1,5 @@
 #include <math.h>
+#include "WiFly.h"
 
 /*
   Sensor         | Index
@@ -37,6 +38,15 @@
 int light_level = 0;
 int motion = 0;
 int sensors = 0;
+
+//Server Info
+byte server[] = {148,61,31,209}; 
+Client client("mobile.cis.gvsu.edu", 80);
+char passphrase[20];
+char ssid[20];
+boolean infoRecved = false;
+char serialBuf[200];
+int debugLED = 6;
 
 double temperature_read()
 {
@@ -103,6 +113,33 @@ int motion_read()
 int lightlevel_read()
 {
   return analogRead( LIGHT_PIN );
+}
+
+void sendData(String data)
+{
+  Serial.println("Connecting");
+  if(client.connect())
+  {    
+    client.println("POST /funware/devices/new_record HTTP/1.1");
+    client.println("Host: mobile.cis.gvsu.edu");
+    client.println("User-Agent: Arduino (WiFly RN-XV)");
+    client.println("Content-Type: text/html");
+    client.println("Connection: close");
+    client.print("Content-length: ");
+    client.println(data.length());
+    client.println();
+    client.println(data);
+    client.println();
+  }
+  else
+    Serial.println("Connection Failed");
+    
+   if (client.connected())
+   {
+     Serial.println("Disconnecting");
+     client.stop();
+     Serial.println("Disconnected");
+   }
 }
 
 void setup()
@@ -227,6 +264,7 @@ void loop()
   }
   
   Serial.println(message);
+  sendData(message);
   
   delay(5000);
 }
