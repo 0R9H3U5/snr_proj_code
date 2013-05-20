@@ -1,0 +1,18 @@
+c:\users\jconklin.asntpdc1\documents\visual studio 2010\Projects\MotorolaUserConfigApp\MotorolaUserConfigApp\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\jconklin.asntpdc1\documents\visual studio 2010\Projects\MotorolaUserConfigApp\MotorolaUserConfigApp\obj\x86\Debug\MotorolaUserConfigApp.Form1.resources
+c:\users\jconklin.asntpdc1\documents\visual studio 2010\Projects\MotorolaUserConfigApp\MotorolaUserConfigApp\obj\x86\Debug\MotorolaUserConfigApp.Properties.Resources.resources
+c:\users\jconklin.asntpdc1\documents\visual studio 2010\Projects\MotorolaUserConfigApp\MotorolaUserConfigApp\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\jconklin.asntpdc1\documents\visual studio 2010\Projects\MotorolaUserConfigApp\MotorolaUserConfigApp\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\jconklin.asntpdc1\documents\visual studio 2010\Projects\MotorolaUserConfigApp\MotorolaUserConfigApp\bin\Debug\MotorolaUserConfigApp.exe
+c:\users\jconklin.asntpdc1\documents\visual studio 2010\Projects\MotorolaUserConfigApp\MotorolaUserConfigApp\bin\Debug\MotorolaUserConfigApp.pdb
+c:\users\jconklin.asntpdc1\documents\visual studio 2010\Projects\MotorolaUserConfigApp\MotorolaUserConfigApp\obj\x86\Debug\MotorolaUserConfigApp.exe
+c:\users\jconklin.asntpdc1\documents\visual studio 2010\Projects\MotorolaUserConfigApp\MotorolaUserConfigApp\obj\x86\Debug\MotorolaUserConfigApp.pdb
+C:\Users\jconklin.ASNTPDC1\Desktop\MotorolaUserConfigApp\MotorolaUserConfigApp\obj\x86\Debug\MotorolaUserConfigApp.exe
+C:\Users\jconklin.ASNTPDC1\Desktop\MotorolaUserConfigApp\MotorolaUserConfigApp\obj\x86\Debug\MotorolaUserConfigApp.pdb
+C:\Users\jconklin.ASNTPDC1\Desktop\MotorolaUserConfigApp\MotorolaUserConfigApp\bin\Debug\MotorolaUserConfigApp.exe
+C:\Users\jconklin.ASNTPDC1\Desktop\MotorolaUserConfigApp\MotorolaUserConfigApp\bin\Debug\MotorolaUserConfigApp.pdb
+C:\Users\jconklin.ASNTPDC1\Desktop\MotorolaUserConfigApp\MotorolaUserConfigApp\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\jconklin.ASNTPDC1\Desktop\MotorolaUserConfigApp\MotorolaUserConfigApp\obj\x86\Debug\MotorolaUserConfigApp.Properties.Resources.resources
+C:\Users\jconklin.ASNTPDC1\Desktop\MotorolaUserConfigApp\MotorolaUserConfigApp\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\jconklin.ASNTPDC1\Desktop\MotorolaUserConfigApp\MotorolaUserConfigApp\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\jconklin.ASNTPDC1\Desktop\MotorolaUserConfigApp\MotorolaUserConfigApp\obj\x86\Debug\MotorolaUserConfigApp.UserConfigApp.resources
