@@ -1,0 +1,56 @@
+Begin Memory Test
+
+Data written: NETGEAR28
+Written data read as: NETGEAR28
+Data written: yellowjade740
+Written data read as: yellowjade740
+Wifly begin
+Wifly join
+connecting...
+connected
+HTTP/1.1 200 OK
+Allow: GET, OPTIONS
+Content-Type: application/json; indent=4
+Date: Thu, 23 May 2013 11:18:39 GMT
+Server: WSGIServer/0.1 Python/2.7.4
+Vary: Accept, Cookie
+transfer-encoding: chunked
+Connection: keep-alive
+
+7d
+{
+    "snippets": "http://restframework.herokuapp.com/snippets/", 
+    "users": "http://restframework.herokuapp.com/users/"
+}
+0
+
+
+disconnecting.
+disconnected.
+Data written: NETGEAR28
+Written data read as: NETGEAR28
+Data written: yellowjade740
+Written data read as: yellowjade740
+Wifly begin
+Wifly join
+connecting...
+connected
+HTTP/1.1 200 OK
+Allow: GET, OPTIONS
+Content-Type: application/json; indent=4
+Date: Thu, 23 May 2013 11:18:47 GMT
+Server: WSGIServer/0.1 Python/2.7.4
+Vary: Accept, Cookie
+transfer-encoding: chunked
+Connection: keep-alive
+
+7d
+{
+    "snippets": "http://restframework.herokuapp.com/snippets/", 
+    "users": "http://restframework.herokuapp.com/users/"
+}
+0
+
+
+disconnecting.
+disconnected.
