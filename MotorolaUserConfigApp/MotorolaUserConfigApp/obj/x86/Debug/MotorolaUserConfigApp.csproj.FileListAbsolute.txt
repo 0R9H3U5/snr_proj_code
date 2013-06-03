@@ -16,3 +16,5 @@ C:\Users\jconklin.ASNTPDC1\Desktop\MotorolaUserConfigApp\MotorolaUserConfigApp\o
 C:\Users\jconklin.ASNTPDC1\Desktop\MotorolaUserConfigApp\MotorolaUserConfigApp\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\jconklin.ASNTPDC1\Desktop\MotorolaUserConfigApp\MotorolaUserConfigApp\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\jconklin.ASNTPDC1\Desktop\MotorolaUserConfigApp\MotorolaUserConfigApp\obj\x86\Debug\MotorolaUserConfigApp.UserConfigApp.resources
+C:\Users\Joe Conklin\Documents\GitHub\snr_proj_code\MotorolaUserConfigApp\MotorolaUserConfigApp\obj\x86\Debug\MotorolaUserConfigApp.exe
+C:\Users\Joe Conklin\Documents\GitHub\snr_proj_code\MotorolaUserConfigApp\MotorolaUserConfigApp\obj\x86\Debug\MotorolaUserConfigApp.pdb
