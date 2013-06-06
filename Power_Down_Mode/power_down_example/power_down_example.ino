@@ -1,5 +1,7 @@
 #include <stdint.h>
 #include <avr/interrupt.h>
+#include <avr/sleep.h>
+#include <avr/power.h>
 #include <avr/wdt.h>
 
 int counter = 0;
@@ -10,6 +12,7 @@ int counter = 0;
 void setup() 
 {
   Serial.begin(115200);
+  Serial.println("one");
   pinMode(6, OUTPUT);
   wdt_setup();
 }
@@ -20,12 +23,14 @@ void setup()
 void loop()
 {
   Serial.println("Loop");
-  delay(3000);
+  delay(100);
+  enterSleep();
 }
 
 //just flashes an LED every 8 seconds for now
 ISR(WDT_vect)
 {
+  Serial.println("ISR");
   counter++;
   
   if(counter % 2)
@@ -36,6 +41,21 @@ ISR(WDT_vect)
   {
     digitalWrite(6, LOW);
   }
+}
+
+void enterSleep(void)
+{
+  set_sleep_mode(SLEEP_MODE_PWR_DOWN);   /* EDIT: could also use SLEEP_MODE_PWR_SAVE for lowest power consumption. */
+  sleep_enable();
+  
+  /* Now enter sleep mode. */
+  sleep_mode();
+  
+  /* The program will continue from here after the WDT timeout*/
+  sleep_disable(); /* First thing to do is disable sleep. */
+  
+  /* Re-enable the peripherals. */
+  power_all_enable();
 }
 
 /*
