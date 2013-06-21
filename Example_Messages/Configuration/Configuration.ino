@@ -1,5 +1,5 @@
+#include <aJSON.h>
 #include <math.h>
-#include "WiFly.h"
 
 /*
   Sensor         | Index
@@ -38,15 +38,9 @@
 int light_level = 0;
 int motion = 0;
 int sensors = 0;
+int sensorConfiguration = 0;
 
-//Server Info
-byte server[] = {148,61,31,209}; 
-Client client("mobile.cis.gvsu.edu", 80);
-char passphrase[20];
-char ssid[20];
-boolean infoRecved = false;
-char serialBuf[200];
-int debugLED = 6;
+char configString[] = "{\"States\":[{\"name\":0,\"wifi\":1,\"seq\":[1, 2, 3, 4, 5],\"next\":[2, 4, 6, 8, 10],\"sen\": 27,\"light\":[0, 100],\"mic\":[8, 16, 32, 64, 128],\"piez\":[ 8, 16, 32, 64, 128],\"lev\": 90,\"tmp\":[60, 80],\"slp_wake\": 1,\"tmr\": 8,\"smpl\": 500}]}";
 
 double temperature_read()
 {
@@ -114,7 +108,86 @@ int lightlevel_read()
 {
   return analogRead( LIGHT_PIN );
 }
+/*
+void getConfiguration()
+{
+  Serial.println("getConfigutarion");
+  WiFly.begin();
+  
+  Serial.println("joining network");
+  if (!WiFly.join(ssid, passphrase)) {
+    Serial.println("Association failed.");
+    while (1) {
+      // Hang on failure.
+    }
+  }
+  
+  Serial.println("connecting...");
 
+  if (client.connect()) {
+    Serial.println("connected");
+    client.println("GET /washing_machine/sensor_array.json HTTP/1.1");
+    client.println();
+  } else {
+    Serial.println("connection failed");
+  }
+}
+*/
+void parseConfiguration()
+{
+  aJsonObject* root = aJson.parse(configString);
+  
+  if (root != NULL) 
+  {
+    Serial.println("Parsed successfully 1");
+    aJsonObject* states = aJson.getObjectItem(root, "States");
+      
+    if (states != NULL) 
+    {
+          Serial.println("Parsed successfully 2" );
+          char* string = aJson.print(states);
+          if (string != NULL) {
+            Serial.println(string);
+          }
+          aJsonObject* state1 = aJson.getArrayItem(states, 0);
+          
+          if (state1 != NULL) 
+          {
+            Serial.println("Parsed successfully 3" );
+            string = aJson.print(state1);
+            if (string != NULL) {
+              Serial.println(string);
+            }
+            
+            
+            aJsonObject* name = aJson.getObjectItem(state1, "name");
+            string = aJson.print(name);
+            if (string != NULL) {
+              Serial.print("Name = ");
+              Serial.println(string);
+            }
+            
+            
+            aJsonObject* seq = aJson.getObjectItem(state1, "seq");
+            Serial.print("seq = [");
+            for(int i = 0; i < 5; i++)
+            {
+              aJsonObject* seqval = aJson.getArrayItem(seq, i);
+              string = aJson.print(seqval);
+              if (string != NULL) {
+                Serial.print(string);
+                if (i < 4)
+                {
+                  Serial.print(", ");
+                }
+              }
+            }
+            Serial.println("]");
+          }
+    }
+  }
+}
+/*
 void sendData(String data)
 {
   Serial.println("Connecting");
@@ -141,7 +214,7 @@ void sendData(String data)
      Serial.println("Disconnected");
    }
 }
-
+*/
 void setup()
 {
   //configure analog i/o
@@ -155,11 +228,13 @@ void setup()
   sensors = CUSTOM;
 
   Serial.begin(115200);
+  //getConfiguration();
+  parseConfiguration();
 }
 
 void loop()
 {
-  String message = "";
+  /*String message = "";
   
   if(sensors & 16)
   {
@@ -266,7 +341,5 @@ void loop()
   Serial.println(message);
   sendData(message);
   
-  delay(5000);
+  delay(5000);*/
 }
-
-

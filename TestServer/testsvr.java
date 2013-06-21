@@ -55,7 +55,7 @@ class testsvr
         //set the port
         if(arguments[0].equals("-1"))
         {
-            portSelect = 8080;
+            portSelect = 44444;
         }
         else
         {
@@ -64,11 +64,11 @@ class testsvr
             	if((portSelect < 0) || (portSelect > 65534))
             	{
             		System.out.println("Invalid port specified, setting to default (8080)");
-            		portSelect = 8080;
+            		portSelect = 44444;
             	}
             } catch (NumberFormatException e) {
             	System.out.println("Invalid port specified, setting to default (8080)");
-            	portSelect = 8080;
+            	portSelect = 44444;
             }
         }
 
