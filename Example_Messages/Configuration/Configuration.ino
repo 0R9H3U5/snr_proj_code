@@ -38,7 +38,6 @@
 int light_level = 0;
 int motion = 0;
 int sensors = 0;
-int sensorConfiguration = 0;
 
 char configString[] = "{\"States\":[{\"name\":0,\"wifi\":1,\"seq\":[1, 2, 3, 4, 5],\"next\":[2, 4, 6, 8, 10],\"sen\": 27,\"light\":[0, 100],\"mic\":[8, 16, 32, 64, 128],\"piez\":[ 8, 16, 32, 64, 128],\"lev\": 90,\"tmp\":[60, 80],\"slp_wake\": 1,\"tmr\": 8,\"smpl\": 500}]}";
 
@@ -234,112 +233,113 @@ void setup()
 
 void loop()
 {
-  /*String message = "";
+  String message = "";
   
   if(sensors & 16)
   {
-    //Serial.println("Temperature");
-    if(message.length() > 0)
-    {
-      message += "&";
-    }
-    
-    message += "temp=";
-    message += (int)temperature_read();  
+    Serial.println("Temperature");
+//    if(message.length() > 0)
+//    {
+//      message += "&";
+//    }
+//    
+//    message += "temp=";
+//    message += (int)temperature_read();  
   }
 
   if(sensors & 8)  
   {
-    //Serial.println("Light");
-    if(message.length() > 0)
-    {
-      message += "&";
-    }
-    
-    message += "light=";
-    message += (int)lightlevel_read();  
+    Serial.println("Light");
+//    if(message.length() > 0)
+//    {
+//      message += "&";
+//    }
+//    
+//    message += "light=";
+//    message += (int)lightlevel_read();  
   }
 
   if(sensors & 64)
   {
-    //Serial.println("Motion");
-    if(message.length() > 0)
-    {
-      message += "&";
-    }
-    
-    message += "motion=";
-    message += motion_read();  
+    Serial.println("Motion");
+//    if(message.length() > 0)
+//    {
+//      message += "&";
+//    }
+//    
+//    message += "motion=";
+//    message += motion_read();  
   }
   
   if(sensors & 1)
   {
-    //Serial.println("Microphone");
-    int *mic = mic_read();
-    if(message.length() > 0)
-    {
-      message += "&";
-    }
-    
-    message += "sound=";
-    message += mic[0];
-    message += "&sound=";
-    message += mic[1];
-    message += "&sound=";
-    message += mic[2];
-    message += "&sound=";
-    message += mic[3];
-    message += "&sound=";
-    message += mic[4]; 
+    Serial.println("Microphone");
+//    int *mic = mic_read();
+//    if(message.length() > 0)
+//    {
+//      message += "&";
+//    }
+//    
+//    message += "sound=";
+//    message += mic[0];
+//    message += "&sound=";
+//    message += mic[1];
+//    message += "&sound=";
+//    message += mic[2];
+//    message += "&sound=";
+//    message += mic[3];
+//    message += "&sound=";
+//    message += mic[4]; 
   }
 
   if(sensors & 2)
   {
-    //Serial.println("Peizo");
-    int* piezo = piezo_read();
-    if(message.length() > 0)
-    {
-      message += "&";
-    }
-    
-    message += "sound=";
-    message += piezo[0];
-    message += "&sound=";
-    message += piezo[1];
-    message += "&sound=";
-    message += piezo[2];
-    message += "&sound=";
-    message += piezo[3];
-    message += "&sound=";
-    message += piezo[4];  
+    Serial.println("Peizo");
+//    int* piezo = piezo_read();
+//    if(message.length() > 0)
+//    {
+//      message += "&";
+//    }
+//    
+//    message += "sound=";
+//    message += piezo[0];
+//    message += "&sound=";
+//    message += piezo[1];
+//    message += "&sound=";
+//    message += piezo[2];
+//    message += "&sound=";
+//    message += piezo[3];
+//    message += "&sound=";
+//    message += piezo[4];  
   }
 
   if(sensors & 4)
   {
-    //Serial.println("Level");
-    if(message.length() > 0)
-    {
-      message += "&";
-    }
-    
-    message += "motion=";
-    message += level_read();  
+    Serial.println("Level");
+//    if(message.length() > 0)
+//    {
+//      message += "&";
+//    }
+//    
+//    message += "motion=";
+//    message += level_read();  
   }
 
   if(sensors & 32)
   {
-    //Serial.println("Contact");
-    if(message.length() > 0)
-    {
-      message += "&";
-    }
-    
-    message += "motion=";
-    message += contact_read();  
+    Serial.println("Contact");
+//    if(message.length() > 0)
+//    {
+//      message += "&";
+//    }
+//    
+//    message += "motion=";
+//    message += contact_read();  
   }
   
-  Serial.println(message);
-  sendData(message);
+  //Serial.println("\nSending Message:");
+  //Serial.println(message);
+  //sendData(message);
   
-  delay(5000);*/
+  delay(5000);
 }
