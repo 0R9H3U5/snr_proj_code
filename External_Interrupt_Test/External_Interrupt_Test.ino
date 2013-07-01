@@ -17,7 +17,7 @@ void setup()
   Serial.begin(38400);
   pinMode(ledPin, OUTPUT);
   pinMode(wakeupPin, INPUT);
-  attachInterrupt(wakeupPin, wakeUp, CHANGE); //LOW,RISING, FALLING,CHANGE
+  attachInterrupt(6, wakeUp, CHANGE); //LOW,RISING, FALLING,CHANGE
   
   digitalWrite(ledPin, ledVal);
   Serial.println("done init");

@@ -19,8 +19,6 @@ void wakeUp()
     digitalWrite(ledPin, HIGH);
   else
     digitalWrite(ledPin, LOW);
-    
-  //enterSleep();
 }
 
 void setup()
@@ -31,13 +29,12 @@ void setup()
   pinMode(micWakePin, INPUT);
   pinMode(ledPin, OUTPUT);
   pinMode(wakeupPin, INPUT);
-  attachInterrupt(micWakePin, wakeUp, CHANGE); //LOW, RISING, FALLING, CHANGE
+  // attachInterrupt(interrupt, function, mode) 
+  attachInterrupt(7, wakeUp, CHANGE); //LOW, RISING, FALLING, CHANGE
   ledVal=0;
   digitalWrite(ledPin, ledVal);
   
   Serial.println("done init");
-  
-  //enterSleep();
 }
 
 void enterSleep(void)
